@@ -7,7 +7,7 @@ channel: LinkedIn (Leah's profile, Austley framing)
 requested: 2026-07-29
 due: 2026-08-04
 stage: approval
-approval: awaiting-leah
+approval: awaiting-approval
 next_action: "Leah: approve draft or request changes (§6)"
 ---
 

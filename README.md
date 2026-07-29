@@ -2,22 +2,30 @@
 
 A workflow tool that takes any campaign or content request through a seven-stage supply chain: **Brief → Draft → Review Checklist → Compliance Flags → Localization Notes → Approval Status → Performance Hypothesis.**
 
-Every request is one markdown file that travels through the stages. The file *is* the record — no separate tracker to keep in sync. Claude Code is the engine; this repo is the tool.
+Every request is one markdown file that travels through the stages. The file *is* the record — no separate tracker to keep in sync. [Claude Code](https://claude.com/claude-code) is the engine; this repo is the tool.
+
+Built by **Leah Dergachev**, who runs it as part of the content operation behind Austley (AI enablement for marketing & comms teams), The Marcomm Grind community, and her personal brand.
 
 ## Install
 
-1. Clone this repo to `~/content-supply-chain-copilot` (the agent definition uses that path).
+1. Use this template (green button above) or clone the repo to `~/content-supply-chain-copilot` — the agent definition uses that path.
 2. Deploy the agent so Claude Code can run it:
    ```bash
    cp ~/content-supply-chain-copilot/agent/content-supply-chain.md ~/.claude/agents/
    ```
 3. In any Claude Code session, say: **"Run the content supply chain on: [your request]"**
 
+## Make it yours
+
+- **Voice calibration:** open `agent/content-supply-chain.md` and replace the voice-docs placeholder with links or paths to your own brand voice and content pillar docs. The better this input, the better the drafts.
+- **Brands & registers:** the example request shows a multi-brand setup (leader-register consultancy vs. practitioner-register community). Adapt the `brand:` values in the template to your own.
+- **Approval flow:** the template assumes one human approver (you, or you + a VA). The agent can never mark anything approved — that's deliberate. Keep it that way.
+
 ## How it works
 
 1. **Give the copilot a request.** Anything from "LinkedIn post about the workshop" to a full campaign ask.
 2. **It creates one pipeline file** in `pipeline/` from `templates/request.md`, assigns an ID (`CSC-001`, `CSC-002`, …), and works the stages in order.
-3. **It stops at Approval.** Nothing ships without human sign-off. The agent sets approval to `awaiting-leah` and reports back with exactly what needs a decision.
+3. **It stops at Approval.** Nothing ships without human sign-off. The agent sets approval to `awaiting-approval` and reports back with exactly what needs a decision.
 4. **After you ship it**, tell the copilot the actuals and it closes the loop against the performance hypothesis in section 8.
 
 ## The stages
@@ -30,7 +38,7 @@ Every request is one markdown file that travels through the stages. The file *is
 | 3. Review Checklist | On-brief, voice, hook, verified proper nouns, no hype words, brand boundary |
 | 4. Compliance Flags | FTC/AI disclosure, claim substantiation, IP/image rights, confidentiality, PII |
 | 5. Localization Notes | Market fit, idioms that don't travel, date/currency/spelling, or explicit N/A |
-| 6. Approval Status | `awaiting-leah` → human flips to `approved` or `changes-requested` |
+| 6. Approval Status | `awaiting-approval` → a human flips to `approved` or `changes-requested` |
 | 7. Performance Hypothesis | Predicted metric + mechanism + review date, then actuals after shipping |
 
 ## Pipeline at a glance
@@ -47,16 +55,14 @@ Or ask the copilot: "What's in the content pipeline?"
 README.md                       — this file
 agent/content-supply-chain.md   — the Claude Code agent that runs the workflow
 templates/request.md            — the stage template every request starts from
-pipeline/                       — active + shipped requests, one file each
+pipeline/                       — your requests, one file each (see note below)
 ```
+
+**Your drafts stay local.** `pipeline/` is gitignored (except the worked example), so real requests — unpublished drafts, campaign details, client context — live only on your machine and are never pushed to this repo. See [`pipeline/CSC-EXAMPLE-message-before-method-linkedin.md`](pipeline/CSC-EXAMPLE-message-before-method-linkedin.md) for what a request looks like mid-flight.
 
 ## Rules
 
 - **Draft-only.** The copilot never publishes, sends, or schedules. Approval is a human action, recorded in §6 of the request file.
-- **Brand boundary.** Austley = leader register. The Marcomm Grind = practitioner/community register. Personal = Leah's thought-leadership voice. The review stage checks the draft landed on the right side.
+- **Brand boundary.** Every draft is checked against the register it belongs in — leader vs. practitioner vs. personal voice — so multi-brand operators don't cross streams.
 - **No invented facts.** Stats, quotes, and product claims are verified or cut — flagged in Compliance if unverifiable.
 - **Falsifiable hypotheses.** Every request predicts a metric, target, window, and mechanism before it ships — and records actuals after.
-
-## Privacy note
-
-`pipeline/` accumulates real drafts and campaign details over time. Keep this repo **private**. To share the tool publicly as an asset, publish a copy with `pipeline/` emptied (keep the `CSC-EXAMPLE` file) and any private doc IDs scrubbed from the agent definition.

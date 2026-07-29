@@ -1,13 +1,13 @@
 ---
 id: CSC-000
 title: 
-brand: austley | tmg | personal | client
+brand: <!-- your brands, e.g.: austley | tmg | personal | client -->
 content_type:            # linkedin-post, email, campaign, landing-page, carousel, video-script, ...
 channel: 
 requested: YYYY-MM-DD
 due: 
 stage: intake            # intake → brief → draft → review → approval → shipped | killed
-approval: not-submitted  # not-submitted | awaiting-leah | changes-requested | approved | shipped
+approval: not-submitted  # not-submitted | awaiting-approval | changes-requested | approved | shipped
 next_action: 
 ---
 
@@ -46,7 +46,7 @@ next_action:
 # 3. Review Checklist
 
 - [ ] **On-brief** — delivers the single message from §1, nothing extra smuggled in
-- [ ] **Right register** — Austley = leader, TMG = practitioner, Personal = Leah's voice
+- [ ] **Right register** — each brand lands in its own register (e.g., leader vs. practitioner vs. personal voice)
 - [ ] **Hook** — line 1 stops the target reader; no throat-clearing
 - [ ] **CTA present and singular**
 - [ ] **Proper nouns verified** — names, companies, products spelled and attributed correctly
@@ -71,7 +71,7 @@ next_action:
 | PII / named individuals consented | | |
 | Platform ToS (tagging, contests, automation) | | |
 
-**Open compliance items:** <!-- anything 🟡/🔴 must be resolved or accepted by Leah before approval -->
+**Open compliance items:** <!-- anything 🟡/🔴 must be resolved or accepted by the owner before approval -->
 
 ---
 
@@ -94,7 +94,7 @@ next_action:
 | Field | Value |
 |---|---|
 | Submitted for approval | YYYY-MM-DD |
-| Approver | Leah / Tania |
+| Approver | Owner / VA |
 | Decision | awaiting / approved / changes-requested |
 | Changes requested | |
 | Approved on | |
