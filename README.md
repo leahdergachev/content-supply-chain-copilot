@@ -25,8 +25,8 @@ Built by **Leah Dergachev**, who runs it as part of the content operation behind
 
 1. **Give the copilot a request.** Anything from "LinkedIn post about the workshop" to a full campaign ask.
 2. **It creates one pipeline file** in `pipeline/` from `templates/request.md`, assigns an ID (`CSC-001`, `CSC-002`, …), and works the stages in order.
-3. **It stops at Approval.** Nothing ships without human sign-off. The agent sets approval to `awaiting-approval` and reports back with exactly what needs a decision.
-4. **After you ship it**, tell the copilot the actuals and it closes the loop against the performance hypothesis in section 8.
+3. **It stops at Approval.** Nothing publishes without human sign-off. The agent sets approval to `awaiting-approval` and reports back with exactly what needs a decision.
+4. **After you publish it**, tell the copilot the actuals and it closes the loop against the performance hypothesis in section 8.
 
 ## The stages
 
@@ -39,7 +39,7 @@ Built by **Leah Dergachev**, who runs it as part of the content operation behind
 | 4. Compliance Flags | FTC/AI disclosure, claim substantiation, IP/image rights, confidentiality, PII |
 | 5. Localization Notes | Market fit, idioms that don't travel, date/currency/spelling, or explicit N/A |
 | 6. Approval Status | `awaiting-approval` → a human flips to `approved` or `changes-requested` |
-| 7. Performance Hypothesis | Predicted metric + mechanism + review date, then actuals after shipping |
+| 7. Performance Hypothesis | Predicted metric + mechanism + review date, then actuals after publishing |
 
 ## Pipeline at a glance
 
@@ -65,4 +65,4 @@ pipeline/                       — your requests, one file each (see note below
 - **Draft-only.** The copilot never publishes, sends, or schedules. Approval is a human action, recorded in §6 of the request file.
 - **Brand boundary.** Every draft is checked against the register it belongs in — leader vs. practitioner vs. personal voice — so multi-brand operators don't cross streams.
 - **No invented facts.** Stats, quotes, and product claims are verified or cut — flagged in Compliance if unverifiable.
-- **Falsifiable hypotheses.** Every request predicts a metric, target, window, and mechanism before it ships — and records actuals after.
+- **Falsifiable hypotheses.** Every request predicts a metric, target, window, and mechanism before it produces — and records actuals after.
