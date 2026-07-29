@@ -111,7 +111,7 @@ Questions? Reply to this email — it reaches the product team directly.
 - "GA" is internal jargon — copy already avoids it in favor of "now available to every workspace" ✔
 - Date references removed from body so the email survives send-queue slips without edits ✔
 - Feature availability is identical in all regions — no region-gated claims to caveat
-- German translation queued for the in-app changelog snippet only (email ships English-first per Meridian's norm); kept sentences short and idiom-free so the DE pass is mechanical
+- German translation queued for the in-app changelog snippet only (email goes out English-first per Meridian's norm); kept sentences short and idiom-free so the DE pass is mechanical
 - "Your data stays yours / never used to train models" phrasing reviewed for EU audience — factual, no puffery
 
 ---
@@ -125,7 +125,7 @@ Questions? Reply to this email — it reaches the product team directly.
 | Decision | awaiting |
 | Changes requested | |
 | Approved on | |
-| Shipped on / where | |
+| Published on / where | |
 
 **The copilot never flips this to approved. Human sign-off only.**
 
@@ -144,11 +144,11 @@ Questions? Reply to this email — it reaches the product team directly.
 
 ---
 
-# 8. Post-Ship Actuals
+# 8. Post-Publish Actuals
 
 | Field | Value |
 |---|---|
-| Actual result | *(filled after shipping)* |
+| Actual result | *(filled after publishing)* |
 | vs. hypothesis | |
 | Why (best explanation) | |
 | Reusable learning | |

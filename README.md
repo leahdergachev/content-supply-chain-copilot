@@ -65,4 +65,4 @@ pipeline/                       — your requests, one file each (see note below
 - **Draft-only.** The copilot never publishes, sends, or schedules. Approval is a human action, recorded in §6 of the request file.
 - **Brand boundary.** Every draft is checked against the register it belongs in — leader vs. practitioner vs. personal voice — so multi-brand operators don't cross streams.
 - **No invented facts.** Stats, quotes, and product claims are verified or cut — flagged in Compliance if unverifiable.
-- **Falsifiable hypotheses.** Every request predicts a metric, target, window, and mechanism before it produces — and records actuals after.
+- **Falsifiable hypotheses.** Every request predicts a metric, target, window, and mechanism before it goes out — and records actuals after.

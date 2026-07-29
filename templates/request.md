@@ -6,8 +6,8 @@ content_type:            # linkedin-post, email, campaign, landing-page, carouse
 channel: 
 requested: YYYY-MM-DD
 due: 
-stage: intake            # intake → brief → draft → review → approval → shipped | killed
-approval: not-submitted  # not-submitted | awaiting-approval | changes-requested | approved | shipped
+stage: intake            # intake → brief → draft → review → approval → published | killed
+approval: not-submitted  # not-submitted | awaiting-approval | changes-requested | approved | published
 next_action: 
 ---
 
@@ -98,7 +98,7 @@ next_action:
 | Decision | awaiting / approved / changes-requested |
 | Changes requested | |
 | Approved on | |
-| Shipped on / where | |
+| Published on / where | |
 
 **The copilot never flips this to approved. Human sign-off only.**
 
@@ -117,7 +117,7 @@ next_action:
 
 ---
 
-# 8. Post-Ship Actuals
+# 8. Post-Publish Actuals
 
 | Field | Value |
 |---|---|
