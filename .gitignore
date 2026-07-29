@@ -1,3 +1,3 @@
 # Real requests stay local — unpublished drafts and campaign details never get pushed.
 pipeline/*
-!pipeline/CSC-EXAMPLE-message-before-method-linkedin.md
+!pipeline/CSC-EXAMPLE-auto-summaries-product-update.md

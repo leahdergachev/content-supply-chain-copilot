@@ -18,7 +18,7 @@ Built by **Leah Dergachev**, who runs it as part of the content operation behind
 ## Make it yours
 
 - **Voice calibration:** open `agent/content-supply-chain.md` and replace the voice-docs placeholder with links or paths to your own brand voice and content pillar docs. The better this input, the better the drafts.
-- **Brands & registers:** the example request shows a multi-brand setup (leader-register consultancy vs. practitioner-register community). Adapt the `brand:` values in the template to your own.
+- **Brands & registers:** the template supports multi-brand operators (own brands, personal voice, client work — the worked example is a client-brand request). Adapt the `brand:` values in the template to your own.
 - **Approval flow:** the template assumes one human approver (you, or you + a VA). The agent can never mark anything approved — that's deliberate. Keep it that way.
 
 ## How it works
@@ -58,7 +58,7 @@ templates/request.md            — the stage template every request starts from
 pipeline/                       — your requests, one file each (see note below)
 ```
 
-**Your drafts stay local.** `pipeline/` is gitignored (except the worked example), so real requests — unpublished drafts, campaign details, client context — live only on your machine and are never pushed to this repo. See [`pipeline/CSC-EXAMPLE-message-before-method-linkedin.md`](pipeline/CSC-EXAMPLE-message-before-method-linkedin.md) for what a request looks like mid-flight.
+**Your drafts stay local.** `pipeline/` is gitignored (except the worked example), so real requests — unpublished drafts, campaign details, client context — live only on your machine and are never pushed to this repo. See [`pipeline/CSC-EXAMPLE-auto-summaries-product-update.md`](pipeline/CSC-EXAMPLE-auto-summaries-product-update.md) — a product-update email for a fictional SaaS client, shown mid-flight at the approval stage with live compliance flags.
 
 ## Rules
 
